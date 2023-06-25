@@ -1,13 +1,11 @@
 var hourBlock = document.querySelector('.container');
 var todaysDate = document.querySelector('#currentDay');
 
-
 $(document).ready(function () {
 
   // show current date and time
 var hour = dayjs().format('dddd, MMMM D, YYYY h:mm');
 todaysDate.textContent = hour;
-
 
 // save btn clicker functionality for local storage
 $('.saveBtn').on('click', function() {
@@ -17,7 +15,6 @@ $('.saveBtn').on('click', function() {
   localStorage.setItem(userText, time);
 });
 
-
 // tracker for hours and past, present and future sorter for colour blocks
 function timeSorter() {
   var currentTime = dayjs.hour();
@@ -25,7 +22,6 @@ function timeSorter() {
   //loop hour blocks
   $('.time-block').each(function() {
       var timeBlock = parseInt($(this).attr('.id').split('hour')[1]);
-
 
 // colour block changes based on current time app is being used
       if (timeBlock < currentTime) {
@@ -43,8 +39,6 @@ function timeSorter() {
         $(this).removeClass('present');
         $(this).addClass('future');
 }})};
-
-timeSorter();
   
 //local storage holders
 $('#hour9 .description').val(localStorage.getItem('hour9'));
