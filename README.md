@@ -27,6 +27,8 @@ THEN the saved events persist
 ## Mock-UP
 
 
-## Deployed Link/Repo
+## Links
+Deplayed Link
 
+Repo Link
 https://github.com/KEINance/WorkDayScheduler
